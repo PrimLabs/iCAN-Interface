@@ -13,7 +13,7 @@ actor Service {
     // iCAN Canister Public Service Interface
     public type iCAN = actor{
 
-        // get your own hubs' info (call this function use your identity)
+        // get your own hubs' info (call this function using your identity)
         // @return array of (Hub Name, Hub Canister Id)
         getHub : query () -> async [(Text, Principal)];
 
@@ -87,7 +87,7 @@ actor Service {
 
         // delete canister from hub canister and withdraw cycles from it ( owner only )
         // @param canister's principal
-        delCaniste : ( id : Principal ) -> async Result.Result<(), Error>;
+        delCanister : ( id : Principal ) -> async Result.Result<(), Error>;
 
         // install cycle wasm to hub canister ( owner only )
         // @param wasm : cycle wasm blob (you can deploy your own cycle wasm to your hub canister)
